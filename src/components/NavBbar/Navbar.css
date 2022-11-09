@@ -1,0 +1,7 @@
+.Navbar{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+}

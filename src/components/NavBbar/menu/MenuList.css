@@ -1,0 +1,4 @@
+.MenuList{
+    display: flex;
+    justify-content: space-between;
+}
