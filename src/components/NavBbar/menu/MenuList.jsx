@@ -6,10 +6,10 @@ function MenuList(){
     return (
         <div>
             <ul className="Navbar">
-                <Section name="Categorias"/>
-                <Section name="Ofertas"/>
-                <Section name="Acerca"/>
-                <Section name="Contacto"/>
+                <Section name="Productos" to="/"/>
+                <Section name="Gama Media" to="/category/gamaMedia"/>
+                <Section name="Gama Alta" to="/category/gamaAlta"/>
+                <Section name="Contacto" to="/contacto/" />
             </ul>
         </div>
     );

@@ -1,12 +1,18 @@
 .footer{
     padding: 5% 0;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     border-top: 1px solid white;
+    height: 100px;
 }
 
 .footer-text{
-    color: black;
-    font-size: 28px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
     margin: 0;
-    font-weight: 600;
+}
+
+.footer-text2{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 0  
 }
