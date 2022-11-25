@@ -1,5 +1,5 @@
 import React from "react";
-import MyButton from "./MyButton/MyButton";
+import MyButton from "../MyButton/MyButton.jsx";
 import { Link } from "react-router-dom";
 import "./Item.css";
 

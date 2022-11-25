@@ -1,49 +1,48 @@
 import getItems from "../../Services/fetchingService";
-import Item from "./Item";
+import ItemList from "./ItemList";
 import "./itemlist.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loader from "../Loader/Loader";
 
 
+// MAIN COMPONENT
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { idCategory } = useParams();
 
   async function getItemsAsync() {
-    let respuesta = await getItems(idCategory);
-    setProducts(respuesta);
+    getItems(idCategory).then(respuesta => {
+      setProducts(respuesta);
+      setIsLoading(false);
+    })
   }
 
   useEffect(() => {
     getItemsAsync();
   }, [idCategory]);
 
-  let title;
-  if (idCategory !== "gamaMedia" && idCategory !== "gamaAlta"){
-    title = "Todos Los Productos";
-  } else {
-    title = (idCategory === "gamaAlta" ? "Productos Gama Alta" : "Productos Gama Media");
-  }
+  const title = setTitle(idCategory);
 
-
-  return (
-    <div className="item-list">
+  const listContainer = (
+    <div>
       <h1 className="tituloListContainer">{title}</h1>
-      {products.map((product) => {
-        return (
-          <Item
-            key={product.id}
-            id={product.id}
-            imgurl={product.imgurl}
-            title={product.title}
-            price={product.price}
-            category={product.category}
-            color="darkgreen"
-          />
-        );
-      })}
-    </div>
+      <ItemList products={products}/>
+    </div> 
   );
+
+  return <> { isLoading ? <Loader/> : listContainer } </>
+}
+
+
+// AUX FUNCTIONS
+function setTitle(idCategory){
+  if (idCategory !== "gamaMedia" && idCategory !== "gamaAlta"){
+    return "Todos Los Anillos";
+  } else {
+    return (idCategory === "gamaAlta" ? "Anillos Gama Alta" : "Anillos Gama Media");
+  }
 }
 
 export default ItemListContainer;

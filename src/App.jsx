@@ -2,10 +2,11 @@ import './App.css';
 import Navbar from './components/NavBbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Anuncio from './components/NavBbar/Anuncio/Anuncio';
+import Anuncio from './components/Anuncio/Anuncio';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-import Anunciogrande from './components/NavBbar/Anuncio/AnuncioGrande';
+import Anunciogrande from './components/Anuncio/AnuncioGrande.jsx';
+import CartContextProvider from './context/cartContext';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const anuncioGrande = "⚙️ Estamos Trabajando en Ello... ⚙️"
   return (
     <div className="App">
+      <CartContextProvider>
       <BrowserRouter>
         <Navbar/>
         <Anuncio anuncio={greeting}/>
@@ -27,6 +29,7 @@ function App() {
     
         <Footer/>
       </BrowserRouter>
+      </CartContextProvider>
     </div>
   );
 }

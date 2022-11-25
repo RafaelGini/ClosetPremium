@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./section/Section";
+import Section from "./Section";
 import "./MenuList.css";
 
 function MenuList(){

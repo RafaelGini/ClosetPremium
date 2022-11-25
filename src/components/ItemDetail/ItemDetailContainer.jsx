@@ -1,22 +1,29 @@
 import { getSingleItem } from "../../Services/fetchingService";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
+import Loader from "../Loader/Loader";
+import MyButton from "../MyButton/MyButton";
+import "./Itemdetail.css";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
-  console.log(id)
 
   async function getItemsAsync() {
-    const respuesta = await getSingleItem(id);
-    setProduct(respuesta);
+    getSingleItem(id).then( respuesta => {
+      setProduct(respuesta);
+      setIsLoading(false);
+    });
   }
 
   useEffect(() => {
     getItemsAsync();
   }, []);
 
-  return <ItemDetail product={product} />;
+  return <> { isLoading ? <Loader/> : <ItemDetail product={product}/> } </>
 }
+
+
 export default ItemDetailContainer;

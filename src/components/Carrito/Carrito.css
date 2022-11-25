@@ -1,0 +1,12 @@
+.Carrito{
+    cursor: pointer;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.cSpan{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 900;
+}

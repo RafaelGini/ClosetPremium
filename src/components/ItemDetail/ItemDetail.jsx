@@ -1,17 +1,36 @@
 import "./Itemdetail.css";
+import ItemCount from "./ItemCount";
+import {useContext, useState} from "react";
+import { cartContext } from "../../context/cartContext";
+import MyButton from "../MyButton/MyButton";
+import { Link } from "react-router-dom";
 
 function ItemDetail({product}) {
+
+  const { addToCart } = useContext(cartContext);
+  const [isInCart, setIsInCart] = useState(false);
+
+  function onAddToCart(count) {
+    setIsInCart(count);
+    addToCart(product, count);
+  }
+
   return (
     <div className="detail-productContainer">
       <div className="detail-product-img">
         <img src={product.imgurl} alt="Product img" />
       </div>
       <div className="card-detail_detail">
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-        <h4 className="priceTag">$ {product.price}</h4>
+        <h2 className="descriptionTitle">{product.title}</h2>
+        <p className="description">{product.description}</p>
+        <h4 className="priceTag">$ {product.price.toLocaleString('en')}</h4>
       </div>
-      {/* <ItemCount stock={product.stock}/> */}
+    {
+      isInCart ? 
+        <Link><MyButton>Ir al Carrito</MyButton></Link>
+        : 
+        <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
+    }
     </div>
   );
 }

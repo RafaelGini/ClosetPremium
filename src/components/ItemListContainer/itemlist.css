@@ -1,6 +1,6 @@
 .item-list{
     margin: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 70px;
     width: 900px;
     display: flex;
@@ -12,6 +12,10 @@
 
 .tituloListContainer{
     width: 100%;
-    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.loading{
+    margin: 360px;
 }
 

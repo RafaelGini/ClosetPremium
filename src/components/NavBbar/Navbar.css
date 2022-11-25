@@ -5,3 +5,11 @@
     list-style: none;
     align-items: center;
 }
+
+.cartLink{
+    text-decoration: none;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
