@@ -1,0 +1,118 @@
+.carritoContainer{
+    margin: 130px 0;
+}
+
+.deleteBtn{
+    border: none;
+    background-color: white;
+    color: rgb(202, 28, 28);
+    cursor: pointer;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.deleteBtn:hover{
+    color: red;
+    transition: all 0.5s;
+}
+
+.noItemsInCartTitle{
+    margin-top: 250px;
+    margin-bottom: 50px;
+    padding: 0 400px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.menuBtn{
+    margin: 10px 0 15px 0;
+    background-color: #272727; 
+    border: 1px solid rgba(58, 58, 58, 0.47);
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 250px;
+}
+
+.menuBtn:hover{
+    transform: scale(1.03);
+    transition: all 0.4s;
+    background-color: #8d7449; 
+}
+
+.cart-container{
+    margin: auto;
+    max-width: 850px;
+}
+
+.CarritoTitle{
+    margin: 0px 0 40px 0;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 38px;
+}
+
+.productDiv{
+    margin: 70px 50px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.193);
+}
+
+.productDiv img{
+    border-radius: 5px;
+    width: 100px;
+    height: 85px !important;
+    transition: all .5s;
+}
+
+.productDiv img:hover{
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+.productDiv h4{
+    width: 150px;
+    font-style: italic;
+}
+
+.titutloCantidad{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: baseline;
+}
+
+.titutloCantidad h2{
+    width: 250px;
+    margin: 0;
+    font-style: italic;
+    text-align: left;
+}
+.titutloCantidad h4{
+    width: 100px;
+    margin: 0;
+    text-align: left;
+}
+
+.totalWidget{
+    font-style: italic;
+    margin: 30px 400px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.totalWidget h2{
+    font-weight: 600;
+    color: #383838;
+}

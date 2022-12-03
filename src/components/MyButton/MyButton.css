@@ -18,3 +18,28 @@
     transition: all 0.4s;
     background-color: #8d7449; 
 }
+
+.fontItalic{
+    font-style: italic;
+}
+
+.deleteCartBtn{
+    background-color: rgb(15, 15, 15);
+    margin: 10px 20px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.40);
+}
+
+.deleteCartBtn:hover{
+    background-color: rgb(162, 0, 0);
+}
+
+.buyCartBtn{
+    background-color: rgb(15, 15, 15);
+    margin: 10px 20px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.40);
+}
+
+.buyCartBtn:hover{
+    background-color: rgb(0, 121, 0);
+}
+

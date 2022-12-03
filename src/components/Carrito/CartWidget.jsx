@@ -4,10 +4,11 @@ import "./Carrito.css";
 
 function Carrito(props){
     const miContext = useContext(cartContext);
+    const itemsInCart = miContext.itemsInCart();
     return (
         <div className="Carrito">
             <img src="/img/cart2.png" alt={props.alt} width={props.width}/>
-            <span className="cSpan">{miContext.itemsInCart()}</span> 
+            {itemsInCart ? <span className="cSpan">{miContext.itemsInCart()}</span> : <></>}
         </div>
     );
 }

@@ -1,9 +1,8 @@
-import { getSingleItem } from "../../Services/fetchingService";
+import { getSingleItem } from "../../Services/fireStore";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import Loader from "../Loader/Loader";
-import MyButton from "../MyButton/MyButton";
 import "./Itemdetail.css";
 
 function ItemDetailContainer() {

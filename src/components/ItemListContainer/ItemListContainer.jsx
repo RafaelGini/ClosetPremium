@@ -1,4 +1,4 @@
-import getItems from "../../Services/fetchingService";
+import  getItems, { getItemsByCategory } from "../../Services/fireStore";
 import ItemList from "./ItemList";
 import "./itemlist.css";
 import { useParams } from "react-router-dom";
@@ -13,10 +13,9 @@ function ItemListContainer() {
   const { idCategory } = useParams();
 
   async function getItemsAsync() {
-    getItems(idCategory).then(respuesta => {
-      setProducts(respuesta);
-      setIsLoading(false);
-    })
+    const respuesta = idCategory ? await getItemsByCategory(idCategory) : await getItems();
+    setProducts(respuesta);
+    setIsLoading(false); 
   }
 
   useEffect(() => {

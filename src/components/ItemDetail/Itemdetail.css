@@ -24,6 +24,7 @@
 
 .priceTag{
   font-size: 18px;
+  font-style: italic;
 }
 
 .countSpan{
@@ -44,4 +45,8 @@
 
 .description{
   font-style: italic;
+}
+
+.powerDesc{
+  color: rgb(1, 1, 136);
 }

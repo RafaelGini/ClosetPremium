@@ -10,7 +10,7 @@ function Navbar(){
         <div className='Navbar'>
             <Logo alt="Closet Logo" width="170px"></Logo>
             <MenuList/>
-            <Link className="cartLink"><Carrito alt="Carrito" width="30px"/></Link>
+            <Link className="cartLink" to="/cart/"><Carrito alt="Carrito" width="30px"/></Link>
         </div>
     );
 }

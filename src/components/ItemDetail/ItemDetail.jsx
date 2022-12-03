@@ -23,11 +23,12 @@ function ItemDetail({product}) {
       <div className="card-detail_detail">
         <h2 className="descriptionTitle">{product.title}</h2>
         <p className="description">{product.description}</p>
+        <p className="powerDesc"> <strong>Poder: </strong>{product.power}</p>
         <h4 className="priceTag">$ {product.price.toLocaleString('en')}</h4>
       </div>
     {
       isInCart ? 
-        <Link><MyButton>Ir al Carrito</MyButton></Link>
+        <Link to="/cart/"><MyButton>Ir al Carrito</MyButton></Link>
         : 
         <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
     }

@@ -5,7 +5,7 @@ import "./Item.css";
 
 
 function Item({ title, imgurl, price, id }){
-  const dinamicUrl = `/detail/${id}`
+  const dinamicUrl = `/detail/${id}`;
     return (
         <Link to={dinamicUrl} className="card">
           <div>

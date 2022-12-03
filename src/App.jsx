@@ -1,12 +1,15 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/NavBbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Anuncio from './components/Anuncio/Anuncio';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import Anunciogrande from './components/Anuncio/AnuncioGrande.jsx';
 import CartContextProvider from './context/cartContext';
+import CartView from './components/CartView/CartView.jsx';
+import Error404 from './components/Error404/Error404';
+import PurchaseDetail from './components/PurchaseDetail/PurchaseDetail';
 
 
 function App() {
@@ -15,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <CartContextProvider>
-      <BrowserRouter>
+      <BrowserRouter> 
         <Navbar/>
         <Anuncio anuncio={greeting}/>
         
@@ -23,8 +26,10 @@ function App() {
           <Route path="/" element={<ItemListContainer/>} />
           <Route path="/category/:idCategory/" element={<ItemListContainer/>} />
           <Route path="/detail/:id" element={<ItemDetailContainer/>} />
+          <Route path="/cart/" element={<CartView/>} />
           <Route path="/contacto/" element={<Anunciogrande title={anuncioGrande}/>} />
-          <Route path="*" element={<h1>Error 404: Está página no existe</h1>} />
+          <Route path="/purchaseDetail/:idOrder" element={<PurchaseDetail/>} />
+          <Route path="*" element={<Error404/>} />
         </Routes>
     
         <Footer/>
