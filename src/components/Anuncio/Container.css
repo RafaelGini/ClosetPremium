@@ -15,3 +15,9 @@
     justify-content: center;
     font-style: italic;
 }
+
+@media only screen and (max-width: 475px) {
+    .AnuncioGrande{
+        font-size: 22px;
+    }
+}

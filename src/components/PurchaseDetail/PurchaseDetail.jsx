@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { cartContext } from "../../context/cartContext";
+import React  from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./PurchaseDetail.css";
@@ -7,8 +6,6 @@ import "./PurchaseDetail.css";
 export default function PurchaseDetail(){
     window.scrollTo({top: 0, behavior: 'smooth'});
     const idOrder = useParams().idOrder;
-    const {clearCart} = useContext(cartContext);
-    clearCart();
     return (
         <div>
             <h1 className="title">¡ Orden Enviada !</h1>

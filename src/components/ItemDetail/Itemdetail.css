@@ -3,8 +3,8 @@
   width: 520px;
   margin: auto;
   padding: 50px;
-  margin-top: 50px;
-  margin-bottom: 60px;
+  margin-top: 130px;
+  margin-bottom: 130px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
 }
@@ -49,4 +49,32 @@
 
 .powerDesc{
   color: rgb(1, 1, 136);
+}
+
+@media only screen and (max-width: 645px) {
+  .detail-productContainer{
+    width: 80%;
+    padding: 10px;
+  }
+
+  .detail-product-img img{
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .detail-productContainer{
+    box-shadow: none;
+  }
+
+}
+
+@media only screen and (max-width: 475px) {
+  .detail-product-img img{
+    width: 200px;
+  }
+
+  .detail-productContainer{
+    margin: 150px auto;
+  }
 }

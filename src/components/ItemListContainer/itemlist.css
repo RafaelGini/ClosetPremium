@@ -2,7 +2,7 @@
     margin: auto;
     margin-top: 20px;
     margin-bottom: 70px;
-    width: 900px;
+    max-width: 900px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

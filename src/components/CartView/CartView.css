@@ -17,9 +17,7 @@
 }
 
 .noItemsInCartTitle{
-    margin-top: 250px;
-    margin-bottom: 50px;
-    padding: 0 400px;
+    margin: 250px auto 50px;
     font-style: italic;
     font-weight: 500;
 }
@@ -77,6 +75,7 @@
     align-items: center;
     padding-bottom: 50px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.193);
+    flex-wrap: wrap;
 }
 
 .productDiv img{
@@ -117,7 +116,8 @@
 
 .totalWidget{
     font-style: italic;
-    margin: 30px 400px;
+    margin: 30px auto;
+    max-width: 980px;
     display: flex;
     justify-content: space-around;
     
@@ -192,4 +192,45 @@
 
 .requiredInput{
     color: rgb(120, 0, 0);
+}
+
+
+@media only screen and (max-width: 700px){
+    .formContainer{
+        width: 90%;
+        padding: 50px 0;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+    }
+}
+
+
+@media only screen and (max-width: 475px) {
+    .CarritoTitle{
+        margin-bottom: 90px;
+    }
+
+    .productDiv{
+        margin: 10px auto 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.193);
+    }
+
+    .titutloCantidad{
+        margin-top: 15px;
+        align-items: center;
+        justify-content: baseline;
+    }
+    .titutloCantidad h2{
+        width: 100px;
+        text-align: center;
+    }
+    .titutloCantidad h4{
+        width: 100px;
+        text-align: center;
+    }
 }

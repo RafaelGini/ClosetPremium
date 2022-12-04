@@ -3,8 +3,8 @@
     color: rgb(70, 70, 70);
     text-decoration: none;
     transition: all .5s;
-    font-size: 24px;
-    font-weight:500;
+    font-size: 28px;
+    font-weight: 500;
     margin: 0 20px;
 }
 
@@ -13,3 +13,13 @@
     transition: all .5s;
     color: black;
 }
+
+@media only screen and (max-width: 980px) {
+    .li__Navbar{
+        margin-top: 2px;
+    }
+
+    .Section{
+        font-size: 24px;
+    }
+  }

@@ -1,8 +1,6 @@
 .title{
-    margin-top: 220px;
     font-size: 38px;
-    margin-bottom: 100px;
-    padding: 0 400px;
+    margin: 220px auto 100px;
     font-style: italic;
     font-weight: 500;
 }
@@ -20,4 +18,10 @@
 
 .menuBtn{
     font-style: italic;
+}
+
+@media only screen and (max-width: 500px){
+    .title{
+        font-size: 28px;
+    }
 }

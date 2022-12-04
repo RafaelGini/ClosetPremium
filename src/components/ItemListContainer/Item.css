@@ -22,6 +22,7 @@
     width: 220px;
     height: 230px;
     object-fit: cover;
+    transition: all .5s;
   }
 
   .card-img img{
@@ -77,4 +78,22 @@
   
   .offerTag{
     color: #21b276
+  }
+
+  @media only screen and (max-width: 340px) {
+    .card-img{
+      width: 180px;
+      height: 200px;
+      transition: all .5s;
+    }
+
+    .card{
+      width: 220px;
+    }
+
+    .card-detail h3{
+      margin: 10px 0;
+    }
+
+  
   }

@@ -19,6 +19,7 @@ function App() {
     <div className="App">
       <CartContextProvider>
       <BrowserRouter> 
+
         <Navbar/>
         <Anuncio anuncio={greeting}/>
         
@@ -33,6 +34,7 @@ function App() {
         </Routes>
     
         <Footer/>
+        
       </BrowserRouter>
       </CartContextProvider>
     </div>

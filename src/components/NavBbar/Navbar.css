@@ -4,6 +4,8 @@
     text-decoration: none;
     list-style: none;
     align-items: center;
+    max-width: 1800px;
+    margin: auto;
 }
 
 .cartLink{
@@ -14,3 +16,26 @@
     justify-content: center;
     color: black;
 }
+
+.LogoNavMenu{
+    transition: all .5s;
+}
+
+@media only screen and (max-width: 980px) {
+    .Navbar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .LogoNavMenu{
+        margin-top: 25px;
+        width: 150px;
+        transition: all .5s;
+    }
+
+    .cartLink{
+        margin-bottom: 25px;
+    }
+  }
+  
