@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 
 function ItemDetail({product}) {
 
+  window.scrollTo({top: 0, behavior: 'smooth'});
+
   const { addToCart } = useContext(cartContext);
   const [isInCart, setIsInCart] = useState(false);
 

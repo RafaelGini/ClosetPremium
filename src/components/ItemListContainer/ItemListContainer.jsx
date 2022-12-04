@@ -8,6 +8,7 @@ import Loader from "../Loader/Loader";
 
 // MAIN COMPONENT
 function ItemListContainer() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { idCategory } = useParams();

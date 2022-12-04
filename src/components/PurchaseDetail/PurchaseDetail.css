@@ -1,0 +1,23 @@
+.title{
+    margin-top: 220px;
+    font-size: 38px;
+    margin-bottom: 100px;
+    padding: 0 400px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.titleh2{
+    font-style: italic;
+    font-weight: 500;
+}
+
+.orderTitle{
+    margin-top: 20px;
+    font-style: italic;
+    margin-bottom: 80px;
+}
+
+.menuBtn{
+    font-style: italic;
+}

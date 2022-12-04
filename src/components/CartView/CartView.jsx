@@ -1,7 +1,7 @@
 // ... Imports ...
 
 import React, { useContext } from "react";
-import { createOrder, uploadData } from "../../Services/fireStore";
+import { createOrder} from "../../Services/fireStore";
 import { cartContext } from "../../context/cartContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -15,6 +15,9 @@ import "./CartView.css";
 // ... Main Component ...
 
 export default function CartView(){
+
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    
     const {cart, clearCart, totalCartPrice} = useContext(cartContext);
     const navigate = useNavigate();
 
@@ -81,7 +84,7 @@ export default function CartView(){
             <div className="cartBtns">
                 {vaciarCarritoWidget}
             </div>
-            <CartForm onSubmit={handleCheckout}/>
+            <CartForm onSubmit={handleCheckout} title="Completá el formulario para crear tu propia orden Unica."/>
         </div>
     );
 
