@@ -16,7 +16,7 @@ La aplicación fue desarrollada durante mi cursada en React.js, `Coderhouse` dic
 
 Utilizamos [Create React App](https://github.com/facebook/create-react-app) para generar el entorno de desarrollo y en mi caso, para los estilos de la web no usé más librerías externas. Para la navegación utilizamos React Router Dom y la App fue diseñada e implementada con React y css. Para almacenar los datos usamos los servicios de Firebase, Firestore Database.
 
-Utilice la metodología Desktop first para el estilizado de la aplicación. 
+Utilice la metodología Desktop first para el estilizado de la aplicación. Y es totalmente Responsive. 
 
 ![Pagina Home](/public/img/capturaDesarrollo.png)
 <br><br/>

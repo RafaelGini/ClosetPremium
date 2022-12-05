@@ -35,7 +35,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.4s;
-    margin-bottom: 250px;
+    margin-bottom: 300px;
 }
 
 .menuBtn:hover{
@@ -213,6 +213,7 @@
 
     .productDiv{
         margin: 10px auto 60px;
+        width: 75%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
